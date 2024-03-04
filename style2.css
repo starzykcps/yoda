@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'star';
+  src: url('SFDistantGalaxy.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: tan;
+}
+body {
+  background-color: #050e1c;
+  font-family:'star';
+}
+
+.frame {
+  --block-size: 35px;
+  top: 50%;
+  left: 50%;
+  margin-left: calc(-6 * var(--block-size));
+  margin-top: calc(-7 * var(--block-size));
+  height: calc(14 * var(--block-size));
+  width: calc(12 * var(--block-size));
+  position: absolute;
+  display: grid;
+  grid-template-rows: var(--block-size) calc(12 * var(--block-size)) var(--block-size);
+}
+
+.board {
+  height: calc(12 * var(--block-size));
+  width: calc(12 * var(--block-size));
+  background: tan;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(12, var(--block-size));
+  grid-template-rows: repeat(12, var(--block-size))
+}
+
+.block {
+  width: var(--block-size);
+  height: var(--block-size);
+  border-radius: 8px;
+}
+
+.empty {
+  background: tan;
+}
+
+.wall {
+  background: url('bush2.png');
+  box-sizing: border-box;
+}
+
+.diamond {
+  background: url('frog.png');
+  background-size: 35px 35px;
+  background-color: tan;
+}
+
+.exit {
+  background: url('yoda.png');
+  background-size: 45px 45px;
+  background-position: center center;
+  background-color: tan;
+ 
+}
+
+.exit.show {
+  opacity: 1;
+}
+
+.player {
+  background: url('grogu.png');
+  background-position: center center;
+  background-size: 45px 35px;
+  background-color: tan
+}
+
+.header .diamond {
+  background-color: transparent;
+  float: right;
+}
+
+.diamond-count,
+.footer {
+  color:#ffe81f;
+  line-height: 35px;
+  padding-left: 15px;
+  font-family: 'star';
+}
+
+.diamond-count {
+  float: right;
+}
+
+.footer {
+  text-align: center
+}
+
+.help {
+  font-family:'star';
+  float: left;
+  font-size: 0.9em;
+ 
+  color: #ffe81f;
+  line-height: var(--block-size)
+}
+
+.bye {
+  animation: 1s linear teleport;
+  animation-fill-mode: forwards;
+}
+
+@keyframes teleport {
+  0% {
+      opacity: 1;
+  }
+  80% {taz
+      opacity: 0;
+  }
+  100% {
+      background: url('');
+      background-size: 50px 35px;
+      background-position: center center;
+      background-color: tan;
+  }
+}
